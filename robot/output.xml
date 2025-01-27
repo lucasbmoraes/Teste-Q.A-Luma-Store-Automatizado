@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-25T22:58:07.858501" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1" source="C:\Dev\RobotFramework\robot\demo1.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o site de teste" line="12">
+<kw name="Abrir Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-25T22:58:08.374055" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<arg>https://magento.softwaretestingboard.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-25T22:58:08.373743" elapsed="2.515340"/>
+</kw>
+<status status="PASS" start="2025-01-25T22:58:08.372668" elapsed="2.516660"/>
+</kw>
+<status status="PASS" start="2025-01-25T22:58:08.371434" elapsed="2.518395"/>
+</test>
+<status status="PASS" start="2025-01-25T22:58:07.860827" elapsed="3.030020"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Demo1" id="s1" pass="1" fail="0" skip="0">Demo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
