@@ -73,7 +73,7 @@ pip install robotframework-seleniumlibrary
 
 > Após isso, copie o arquivo **chromedriver.exe**, e cole no path mencionado no passo anterior:
 
-![alt text](../RobotFramework/assets/../RobotFramework/assets/image-12.png)
+![alt text](../RobotFramework/assets/image-12.png)
 
 ![alt text](../RobotFramework/assets/image-13.png)
 
@@ -117,3 +117,9 @@ Cenário 1: Acessando o site do Robot
 ~~~python
  robot -d results tests
 ~~~
+
+## Relatórios de testes
+
+> O Robot gera automaticamente relatórios que metrificam e dão detalhes dos cenários de testes executados. Eles podem ser acessados em: **RobotFramework > results > report.html**
+
+![alt text](../RobotFramework/assets/imageRelatorios.png)

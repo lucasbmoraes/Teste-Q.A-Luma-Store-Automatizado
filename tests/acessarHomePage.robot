@@ -17,7 +17,7 @@ Fechar navegador
     Close Browser
 
 *** Test Cases ***
-Cenário: Verificar carregamento da homepage
+Cenário 1: Verificar carregamento da homepage
     Abrir o site da Luma Store
     Verificar se a homepage está carregada
     Fechar navegador

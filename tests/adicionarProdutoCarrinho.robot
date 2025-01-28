@@ -35,18 +35,15 @@ Fechar Navegador
 Cenário 1: Realizar checkout
     Abrir Navegador e Acessar o Site
 
-    # Realizar login
     Aguardar e Clicar no Elemento        ${BOTAO_LOGIN}
     Aguardar e Preencher Campo           ${INPUT_EMAIL}      lori.watts@example.com
     Aguardar e Preencher Campo           ${INPUT_SENHA}      Teste123**
     Aguardar e Clicar no Elemento        ${BOTAO_ENTRAR}
 
-    # Selecionar produto e personalização
     Aguardar e Clicar no Elemento        ${PRODUTO}
     Aguardar e Clicar no Elemento        ${TAMANHO}
     Aguardar e Clicar no Elemento        ${COR}
 
-    # Adicionar ao carrinho
     Aguardar e Clicar no Elemento        ${BOTAO_ADD_TO_CART}
 
     Fechar Navegador
