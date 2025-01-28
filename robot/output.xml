@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-25T22:58:07.858501" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo1" source="C:\Dev\RobotFramework\robot\demo1.robot">
-<test id="s1-t1" name="Cenário 1: Acessando o site de teste" line="12">
-<kw name="Abrir Site">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-27T22:54:33.387252" rpa="false" schemaversion="5">
+<suite id="s1" name="adicionarProdutoCarrinho" source="C:\Dev\RobotFramework\robot\adicionarProdutoCarrinho.robot">
+<test id="s1-t1" name="Cenário 1: Adicionar Produto ao Carrinho" line="27">
+<kw name="Abrir Navegador e Acessar o Site">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-25T22:58:08.374055" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
-<arg>https://magento.softwaretestingboard.com/</arg>
+<msg time="2025-01-27T22:54:33.905761" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-25T22:58:08.373743" elapsed="2.515340"/>
+<status status="PASS" start="2025-01-27T22:54:33.905274" elapsed="4.472937"/>
 </kw>
-<status status="PASS" start="2025-01-25T22:58:08.372668" elapsed="2.516660"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T22:54:38.378585" elapsed="0.049906"/>
 </kw>
-<status status="PASS" start="2025-01-25T22:58:08.371434" elapsed="2.518395"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T22:54:58.789242" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-27T22:54:58.789642" level="FAIL">Element 'xpath=//div[contains(@class, 'product-items widget-product-grid')]' did not appear in 20 seconds.</msg>
+<arg>xpath=//div[contains(@class, 'product-items widget-product-grid')]</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2025-01-27T22:54:38.428804" elapsed="20.364225">Element 'xpath=//div[contains(@class, 'product-items widget-product-grid')]' did not appear in 20 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-01-27T22:54:33.904147" elapsed="24.889216">Element 'xpath=//div[contains(@class, 'product-items widget-product-grid')]' did not appear in 20 seconds.</status>
+</kw>
+<kw name="Selecionar Produto">
+<status status="NOT RUN" start="2025-01-27T22:54:58.794013" elapsed="0.000069"/>
+</kw>
+<kw name="Clicar no Botão Add to Cart">
+<status status="NOT RUN" start="2025-01-27T22:54:58.794587" elapsed="0.000089"/>
+</kw>
+<kw name="Fechar Navegador">
+<status status="NOT RUN" start="2025-01-27T22:54:58.795126" elapsed="0.000058"/>
+</kw>
+<status status="FAIL" start="2025-01-27T22:54:33.903009" elapsed="24.892661">Element 'xpath=//div[contains(@class, 'product-items widget-product-grid')]' did not appear in 20 seconds.</status>
 </test>
-<status status="PASS" start="2025-01-25T22:58:07.860827" elapsed="3.030020"/>
+<status status="FAIL" start="2025-01-27T22:54:33.389400" elapsed="25.408010"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Demo1" id="s1" pass="1" fail="0" skip="0">Demo1</stat>
+<stat name="adicionarProdutoCarrinho" id="s1" pass="0" fail="1" skip="0">adicionarProdutoCarrinho</stat>
 </suite>
 </statistics>
 <errors>
