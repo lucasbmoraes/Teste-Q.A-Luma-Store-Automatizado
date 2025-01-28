@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    RequestsLibrary
 Library    BuiltIn
 
 *** Variables ***

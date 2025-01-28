@@ -32,10 +32,10 @@ Fechar Navegador
 Cenário 1: Criando Conta na Luma Store
     Abrir Navegador e Acessar o Site
     Clicar em Criar Conta
-    Aguardar e Preencher    ${INPUT_FIRSTNAME}        Lucas
+    Aguardar e Preencher    ${INPUT_FIRSTNAME}        Teste Lucas
     Aguardar e Preencher    ${INPUT_LASTNAME}         Moraes
-    Aguardar e Preencher    ${INPUT_EMAIL}            lucasteste@gmail.com
-    Aguardar e Preencher    ${INPUT_PASSWORD}         Lucas123**
-    Aguardar e Preencher    ${INPUT_CONFIRMPASSWORD}  Lucas123**
+    Aguardar e Preencher    ${INPUT_EMAIL}            lucasteste2@gmail.com
+    Aguardar e Preencher    ${INPUT_PASSWORD}         Lucas123***
+    Aguardar e Preencher    ${INPUT_CONFIRMPASSWORD}  Lucas123***
     Clicar em Submit
     Fechar Navegador
