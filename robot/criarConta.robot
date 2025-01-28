@@ -1,7 +1,7 @@
-** Settings **
-Library  SeleniumLibrary
+*** Settings ***
+Library    SeleniumLibrary
 
-** Variables **
+*** Variables ***
 ${URL}                      https://magento.softwaretestingboard.com/
 ${INPUT_FIRSTNAME}          id:firstname
 ${INPUT_LASTNAME}           id:lastname
@@ -9,37 +9,33 @@ ${INPUT_EMAIL}              id:email_address
 ${INPUT_PASSWORD}           id:password
 ${INPUT_CONFIRMPASSWORD}    id:password-confirmation    
 
-** Keywords **
-Abrir navegador e acessar o site
-    Open Browser    ${URL}   chrome
+*** Keywords ***
+Abrir Navegador e Acessar o Site
+    Open Browser    ${URL}    chrome
     Maximize Browser Window
 
-Clicar em criar conta
+Clicar em Criar Conta
     Click Element    xpath=//a[text()='Create an Account']
 
-Preencher o formulário
-    Input Text      ${INPUT_FIRSTNAME}        Lucas
-    Sleep           3s
-    Input Text      ${INPUT_LASTNAME}         Moraes
-    Sleep           3s
-    Input Text      ${INPUT_EMAIL}            lucasteste@gmail.com
-    Sleep           5s
-    Input Text      ${INPUT_PASSWORD}         Lucas123**
-    Sleep           5s
-    Input Text      ${INPUT_CONFIRMPASSWORD}  Lucas123**
-    Sleep           5s
+Aguardar e Preencher
+    [Arguments]    ${locator}    ${texto}
+    Wait Until Element Is Visible    ${locator}    timeout=10
+    Input Text    ${locator}    ${texto}
 
-Clicar em submit
+Clicar em Submit
     Click Element    xpath=//button[contains(@class, 'action submit primary')]
 
-Fechar navegador
+Fechar Navegador
     Close Browser
 
-** Test Cases **
-Cenário 1: Criando conta na Luma Store
-    Abrir navegador e acessar o site
-    Clicar em criar conta
-    Preencher o formulário
-    Clicar em submit
-    Fechar navegador
-    
+*** Test Cases ***
+Cenário 1: Criando Conta na Luma Store
+    Abrir Navegador e Acessar o Site
+    Clicar em Criar Conta
+    Aguardar e Preencher    ${INPUT_FIRSTNAME}        Lucas
+    Aguardar e Preencher    ${INPUT_LASTNAME}         Moraes
+    Aguardar e Preencher    ${INPUT_EMAIL}            lucasteste@gmail.com
+    Aguardar e Preencher    ${INPUT_PASSWORD}         Lucas123**
+    Aguardar e Preencher    ${INPUT_CONFIRMPASSWORD}  Lucas123**
+    Clicar em Submit
+    Fechar Navegador
