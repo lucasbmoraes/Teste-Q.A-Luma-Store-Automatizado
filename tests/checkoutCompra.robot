@@ -47,6 +47,7 @@ Cenário 1: Realizar checkout
     Aguardar e Clicar               ${COR}    
     Aguardar e Clicar               ${BOTA0_ADD_TO_CART}
     Aguardar e Clicar               ${SHOPPING_CART}
+    Sleep                           4s
     Aguardar e Clicar               ${BOTAO_PROCEED_TO_CHECKOUT}
     Sleep                           4s
     Aguardar e Clicar               ${BOTAO_NEXT}
