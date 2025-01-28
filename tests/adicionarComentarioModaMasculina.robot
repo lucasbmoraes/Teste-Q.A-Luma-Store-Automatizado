@@ -5,7 +5,6 @@ Library    SeleniumLibrary
 ${URL}                     https://magento.softwaretestingboard.com/
 ${BOTAO_NAV_MEN}           id:ui-id-5
 ${BOTAO_REVIEW}            id:tab-label-reviews
-${AVALIACAO}               id:Rating_3_label
 ${NOME_USUARIO}            id:nickname_field     
 ${RESUMO}                  id:summary_field
 ${DESCRICAO}               id:review_field
@@ -30,7 +29,7 @@ Acessar tab de review
     Click Element    ${BOTAO_REVIEW}
 
 Preencher formulário de review
-    Click Element    ${AVALIACAO}
+    Sleep            3s
     Input Text       ${NOME_USUARIO}    Usuario Teste
     Sleep            3s
     Input Text       ${RESUMO}          Resumo de teste

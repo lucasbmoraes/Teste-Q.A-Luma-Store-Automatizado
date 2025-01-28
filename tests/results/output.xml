@@ -1,260 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-28T17:45:02.904570" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-28T18:10:21.701187" rpa="false" schemaversion="5">
 <suite id="s1" name="adicionarComentarioModaMasculina" source="C:\Dev\RobotFramework\tests\adicionarComentarioModaMasculina.robot">
-<test id="s1-t1" name="Cenário: Adicionar review em um produto aleatório da moda masculina" line="46">
+<test id="s1-t1" name="Cenário 1: Adicionar review em um produto aleatório da moda masculina" line="45">
 <kw name="Abrir o site da Luma Store">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-28T17:45:03.438292" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<msg time="2025-01-28T18:10:22.135361" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-28T17:45:03.437895" elapsed="4.612086"/>
+<status status="PASS" start="2025-01-28T18:10:22.134958" elapsed="4.531569"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-28T17:45:08.050322" elapsed="0.042560"/>
+<status status="PASS" start="2025-01-28T18:10:26.666908" elapsed="0.050316"/>
 </kw>
-<status status="PASS" start="2025-01-28T17:45:03.436754" elapsed="4.656331"/>
+<status status="PASS" start="2025-01-28T18:10:22.133783" elapsed="4.583647"/>
 </kw>
 <kw name="Acessar módulo de produtos masculinos">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-28T17:45:08.094485" level="INFO">Clicking element 'id:ui-id-5'.</msg>
+<msg time="2025-01-28T18:10:26.719286" level="INFO">Clicking element 'id:ui-id-5'.</msg>
 <arg>${BOTAO_NAV_MEN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T17:45:08.093993" elapsed="1.030515"/>
+<status status="PASS" start="2025-01-28T18:10:26.718496" elapsed="1.168904"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//ol[contains(@class, 'product-items')]</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-28T17:45:09.124824" elapsed="0.034498"/>
+<status status="PASS" start="2025-01-28T18:10:27.887662" elapsed="0.032049"/>
 </kw>
-<status status="PASS" start="2025-01-28T17:45:08.093571" elapsed="1.065943"/>
+<status status="PASS" start="2025-01-28T18:10:26.717990" elapsed="1.201911"/>
 </kw>
 <kw name="Selecionar produto aleatório e acessar">
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2025-01-28T17:45:09.175330" level="INFO">${total_produtos} = 4</msg>
+<msg time="2025-01-28T18:10:27.935827" level="INFO">${total_produtos} = 4</msg>
 <var>${total_produtos}</var>
 <arg>xpath=//ol[contains(@class, 'product-items')]/li</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2025-01-28T17:45:09.160522" elapsed="0.014884"/>
+<status status="PASS" start="2025-01-28T18:10:27.920942" elapsed="0.014958"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-01-28T17:45:09.176164" level="INFO">${index_aleatorio} = 4</msg>
+<msg time="2025-01-28T18:10:27.936687" level="INFO">${index_aleatorio} = 4</msg>
 <var>${index_aleatorio}</var>
 <arg>random.randint(1, ${total_produtos})</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-01-28T17:45:09.175657" elapsed="0.000559"/>
+<status status="PASS" start="2025-01-28T18:10:27.936147" elapsed="0.000592"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-28T17:45:09.176752" level="INFO">Clicking element 'xpath=(//ol[contains(@class, 'product-items')]/li)[4]//a[contains(@class, 'product-item-photo')]'.</msg>
+<msg time="2025-01-28T18:10:27.937290" level="INFO">Clicking element 'xpath=(//ol[contains(@class, 'product-items')]/li)[4]//a[contains(@class, 'product-item-photo')]'.</msg>
 <arg>xpath=(//ol[contains(@class, 'product-items')]/li)[${index_aleatorio}]//a[contains(@class, 'product-item-photo')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T17:45:09.176416" elapsed="1.012486"/>
+<status status="PASS" start="2025-01-28T18:10:27.936958" elapsed="0.992800"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=product-options-wrapper</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-28T17:45:10.189260" elapsed="0.026658"/>
+<status status="PASS" start="2025-01-28T18:10:28.930129" elapsed="0.036256"/>
 </kw>
-<status status="PASS" start="2025-01-28T17:45:09.160038" elapsed="1.056122"/>
+<status status="PASS" start="2025-01-28T18:10:27.920487" elapsed="1.046073"/>
 </kw>
 <kw name="Acessar tab de review">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-28T17:45:10.217399" level="INFO">Clicking element 'id:tab-label-reviews'.</msg>
+<msg time="2025-01-28T18:10:28.967779" level="INFO">Clicking element 'id:tab-label-reviews'.</msg>
 <arg>${BOTAO_REVIEW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T17:45:10.217110" elapsed="0.110288"/>
+<status status="PASS" start="2025-01-28T18:10:28.967489" elapsed="0.109976"/>
 </kw>
-<status status="PASS" start="2025-01-28T17:45:10.216652" elapsed="0.110921"/>
+<status status="PASS" start="2025-01-28T18:10:28.967033" elapsed="0.110601"/>
 </kw>
 <kw name="Preencher formulário de review">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-28T17:45:10.329064" level="INFO">Clicking element 'id:Rating_3_label'.</msg>
-<msg time="2025-01-28T17:45:11.600835" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-01-28T17:45:11.601137" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class="rating-3" for="Rating_3" title="3 stars" id="Rating_3_label"&gt;...&lt;/label&gt; is not clickable at point (430, 232). Other element would receive the click: &lt;li class="item review-item" itemscope="" itemprop="review" itemtype="http://schema.org/Review"&gt;...&lt;/li&gt;
-  (Session info: chrome=132.0.6834.111)
-Stacktrace:
-	GetHandleVerifier [0x00BB6FB3+25091]
-	(No symbol) [0x00B3E5D4]
-	(No symbol) [0x00A1B353]
-	(No symbol) [0x00A65498]
-	(No symbol) [0x00A638A4]
-	(No symbol) [0x00A61447]
-	(No symbol) [0x00A6075D]
-	(No symbol) [0x00A55355]
-	(No symbol) [0x00A81EDC]
-	(No symbol) [0x00A54DF4]
-	(No symbol) [0x00A82174]
-	(No symbol) [0x00A9B46E]
-	(No symbol) [0x00A81C76]
-	(No symbol) [0x00A53185]
-	(No symbol) [0x00A5430D]
-	GetHandleVerifier [0x00EAD5B3+3131395]
-	GetHandleVerifier [0x00EBDDA4+3198964]
-	GetHandleVerifier [0x00EB8CC2+3178258]
-	GetHandleVerifier [0x00C53290+664800]
-	(No symbol) [0x00B4744D]
-	(No symbol) [0x00B44798]
-	(No symbol) [0x00B44936]
-	(No symbol) [0x00B37030]
-	BaseThreadInitThunk [0x75CB5D49+25]
-	RtlInitializeExceptionChain [0x77DDCEBB+107]
-	RtlGetAppContainerNamedObjectPath [0x77DDCE41+561]
-</msg>
-<arg>${AVALIACAO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-01-28T17:45:10.328726" elapsed="1.278740">ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class="rating-3" for="Rating_3" title="3 stars" id="Rating_3_label"&gt;...&lt;/label&gt; is not clickable at point (430, 232). Other element would receive the click: &lt;li class="item review-item" itemscope="" itemprop="review" itemtype="http://schema.org/Review"&gt;...&lt;/li&gt;
-  (Session info: chrome=132.0.6834.111)
-Stacktrace:
-	GetHandleVerifier [0x00BB6FB3+25091]
-	(No symbol) [0x00B3E5D4]
-	(No symbol) [0x00A1B353]
-	(No symbol) [0x00A65498]
-	(No symbol) [0x00A638A4]
-	(No symbol) [0x00A61447]
-	(No symbol) [0x00A6075D]
-	(No symbol) [0x00A55355]
-	(No symbol) [0x00A81EDC]
-	(No symbol) [0x00A54DF4]
-	(No symbol) [0x00A82174]
-	(No symbol) [0x00A9B46E]
-	(No symbol) [0x00A81C76]
-	(No symbol) [0x00A53185]
-	(No symbol) [0x00A5430D]
-	GetHandleVerifier [0x00EAD5B3+3131395]
-	GetHandleVerifier [0x00EBDDA4+3198964]
-	GetHandleVerifier [0x00EB8CC2+3178258]
-	GetHandleVerifier [0x00C53290+664800]
-	(No symbol) [0x00B4744D]
-	(No symbol) [0x00B44798]
-	(No symbol) [0x00B44936]
-	(No symbol) [0x00B37030]
-	BaseThreadInitThunk [0x75CB5D49+25]
-	RtlInitializeExceptionChain [0x77DDCEBB+107]
-	RtlGetAppContainerNamedObjectPath [0x77DDCE41+561]
-</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-28T18:10:32.079334" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-28T18:10:29.078659" elapsed="3.000860"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-28T18:10:32.080160" level="INFO">Typing text 'Usuario Teste' into text field 'id:nickname_field'.</msg>
 <arg>${NOME_USUARIO}</arg>
 <arg>Usuario Teste</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.607891" elapsed="0.000095"/>
+<status status="PASS" start="2025-01-28T18:10:32.079791" elapsed="0.165600"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-28T18:10:35.246451" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.608258" elapsed="0.000055"/>
+<status status="PASS" start="2025-01-28T18:10:32.245716" elapsed="3.000975"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-28T18:10:35.247541" level="INFO">Typing text 'Resumo de teste' into text field 'id:summary_field'.</msg>
 <arg>${RESUMO}</arg>
 <arg>Resumo de teste</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.608473" elapsed="0.000043"/>
+<status status="PASS" start="2025-01-28T18:10:35.247075" elapsed="0.120312"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-28T18:10:38.368147" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.608653" elapsed="0.000042"/>
+<status status="PASS" start="2025-01-28T18:10:35.367676" elapsed="3.000644"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-28T18:10:38.368968" level="INFO">Typing text 'Descrição de teste' into text field 'id:review_field'.</msg>
 <arg>${DESCRICAO}</arg>
 <arg>Descrição de teste</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.608824" elapsed="0.000039"/>
+<status status="PASS" start="2025-01-28T18:10:38.368595" elapsed="0.121985"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-28T18:10:41.491696" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.609222" elapsed="0.000051"/>
+<status status="PASS" start="2025-01-28T18:10:38.490837" elapsed="3.001108"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-28T18:10:41.492958" level="INFO">Clicking element 'xpath=//*[@id="review-form"]/div/div/button'.</msg>
 <arg>${SUBMIT_REVIEW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.609416" elapsed="0.000039"/>
+<status status="PASS" start="2025-01-28T18:10:41.492351" elapsed="0.133211"/>
 </kw>
-<status status="FAIL" start="2025-01-28T17:45:10.328219" elapsed="1.281453">ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class="rating-3" for="Rating_3" title="3 stars" id="Rating_3_label"&gt;...&lt;/label&gt; is not clickable at point (430, 232). Other element would receive the click: &lt;li class="item review-item" itemscope="" itemprop="review" itemtype="http://schema.org/Review"&gt;...&lt;/li&gt;
-  (Session info: chrome=132.0.6834.111)
-Stacktrace:
-	GetHandleVerifier [0x00BB6FB3+25091]
-	(No symbol) [0x00B3E5D4]
-	(No symbol) [0x00A1B353]
-	(No symbol) [0x00A65498]
-	(No symbol) [0x00A638A4]
-	(No symbol) [0x00A61447]
-	(No symbol) [0x00A6075D]
-	(No symbol) [0x00A55355]
-	(No symbol) [0x00A81EDC]
-	(No symbol) [0x00A54DF4]
-	(No symbol) [0x00A82174]
-	(No symbol) [0x00A9B46E]
-	(No symbol) [0x00A81C76]
-	(No symbol) [0x00A53185]
-	(No symbol) [0x00A5430D]
-	GetHandleVerifier [0x00EAD5B3+3131395]
-	GetHandleVerifier [0x00EBDDA4+3198964]
-	GetHandleVerifier [0x00EB8CC2+3178258]
-	GetHandleVerifier [0x00C53290+664800]
-	(No symbol) [0x00B4744D]
-	(No symbol) [0x00B44798]
-	(No symbol) [0x00B44936]
-	(No symbol) [0x00B37030]
-	BaseThreadInitThunk [0x75CB5D49+25]
-	RtlInitializeExceptionChain [0x77DDCEBB+107]
-	RtlGetAppContainerNamedObjectPath [0x77DDCE41+561]
-</status>
+<status status="PASS" start="2025-01-28T18:10:29.078184" elapsed="12.547551"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-28T18:10:44.627054" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-28T17:45:11.610168" elapsed="0.000082"/>
+<status status="PASS" start="2025-01-28T18:10:41.626203" elapsed="3.001157"/>
 </kw>
 <kw name="Fechar navegador">
-<status status="NOT RUN" start="2025-01-28T17:45:11.610636" elapsed="0.000065"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-28T18:10:44.628677" elapsed="2.275744"/>
 </kw>
-<status status="FAIL" start="2025-01-28T17:45:03.435523" elapsed="8.175546">ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class="rating-3" for="Rating_3" title="3 stars" id="Rating_3_label"&gt;...&lt;/label&gt; is not clickable at point (430, 232). Other element would receive the click: &lt;li class="item review-item" itemscope="" itemprop="review" itemtype="http://schema.org/Review"&gt;...&lt;/li&gt;
-  (Session info: chrome=132.0.6834.111)
-Stacktrace:
-	GetHandleVerifier [0x00BB6FB3+25091]
-	(No symbol) [0x00B3E5D4]
-	(No symbol) [0x00A1B353]
-	(No symbol) [0x00A65498]
-	(No symbol) [0x00A638A4]
-	(No symbol) [0x00A61447]
-	(No symbol) [0x00A6075D]
-	(No symbol) [0x00A55355]
-	(No symbol) [0x00A81EDC]
-	(No symbol) [0x00A54DF4]
-	(No symbol) [0x00A82174]
-	(No symbol) [0x00A9B46E]
-	(No symbol) [0x00A81C76]
-	(No symbol) [0x00A53185]
-	(No symbol) [0x00A5430D]
-	GetHandleVerifier [0x00EAD5B3+3131395]
-	GetHandleVerifier [0x00EBDDA4+3198964]
-	GetHandleVerifier [0x00EB8CC2+3178258]
-	GetHandleVerifier [0x00C53290+664800]
-	(No symbol) [0x00B4744D]
-	(No symbol) [0x00B44798]
-	(No symbol) [0x00B44936]
-	(No symbol) [0x00B37030]
-	BaseThreadInitThunk [0x75CB5D49+25]
-	RtlInitializeExceptionChain [0x77DDCEBB+107]
-	RtlGetAppContainerNamedObjectPath [0x77DDCE41+561]
-</status>
+<status status="PASS" start="2025-01-28T18:10:44.628216" elapsed="2.276456"/>
+</kw>
+<status status="PASS" start="2025-01-28T18:10:22.132638" elapsed="24.772563"/>
 </test>
-<status status="FAIL" start="2025-01-28T17:45:02.906878" elapsed="8.706178"/>
+<status status="PASS" start="2025-01-28T18:10:21.703412" elapsed="25.203594"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="adicionarComentarioModaMasculina" id="s1" pass="0" fail="1" skip="0">adicionarComentarioModaMasculina</stat>
+<stat name="adicionarComentarioModaMasculina" id="s1" pass="1" fail="0" skip="0">adicionarComentarioModaMasculina</stat>
 </suite>
 </statistics>
 <errors>
